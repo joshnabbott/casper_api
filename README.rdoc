@@ -1,6 +1,51 @@
-= casper_api
+= Casper API
 
-Description goes here.
+A work in progress Ruby wrapper for the Casper asset management API.
+
+== Installation
+
+In your Gemfile, put the following:
+
+  gem 'casper_api', :git => 'git://github.com/factorylabs/casper_api.git'
+
+Don't forget to bundle your gems!
+
+== Usage
+
+Here's a quick and dirty example of how to use this:
+
+  include CasperApi
+
+  @casper         = Casper.new('<username>', '<password>')
+  @joshs_computer = @casper.computers.find('Joshua Abbott') #=> Assuming a computer named "Joshua Abbott" exists, will return this computer and all associated data.
+
+  - or -
+
+  @some_computer = @casper.computers.find(1) #=> Returns computer with the ID of 1.
+
+
+If you don't know computer names or IDs you can always grab the full list of computers from Casper and then search the list for what you're looking for:
+
+  @list             = @casper.computers.all #=> Will return a list of all computers with their names and IDs
+  joshs_computer_id = @list.search(:name, 'Josh').first.id
+  @joshs_computer   = @casper.computers.find(joshs_computer_id)
+
+== API Methods
+
+So far there is support for the following calls:
+
+  - Casper#buildings
+  - Casper#categories
+  - Casper#computer_groups
+  - Casper#computers
+  - Casper#departments
+  - Casper#mobile_devices
+
+Each of these will respond to the "all" and "find" methods. Lists respond to the "search" method.
+
+== Tests
+
+There are none. Please help.
 
 == Contributing to casper_api
  
@@ -16,4 +61,5 @@ Description goes here.
 
 Copyright (c) 2011 Josh N. Abbott. See LICENSE.txt for
 further details.
+
 
