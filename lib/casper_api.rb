@@ -1,3 +1,4 @@
+require 'httparty'
 require 'ostruct'
 require 'cgi'
 require 'lib/connection'
