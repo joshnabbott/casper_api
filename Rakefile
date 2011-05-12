@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "casper_api"
-  gem.homepage = "http://github.com/joshnabbott/casper_api"
+  gem.homepage = "http://github.com/factorylabs/casper_api"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{API wrapper for the Casper Asset management service.}
+  gem.description = %Q{API wrapper for the Casper Asset management service.}
   gem.email = "joshnabbott@gmail.com"
   gem.authors = ["Josh N. Abbott"]
   # dependencies defined in Gemfile

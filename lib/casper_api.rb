@@ -1,0 +1,21 @@
+require 'ostruct'
+require 'cgi'
+require 'lib/connection'
+require 'lib/casper'  
+require 'lib/list'
+require 'lib/list_item'
+require 'lib/buildings'
+require 'lib/building'
+require 'lib/categories'
+require 'lib/category'
+require 'lib/computer_groups'
+require 'lib/computer_group'
+require 'lib/computers'
+require 'lib/computer'
+require 'lib/departments'
+require 'lib/department'
+require 'lib/mobile_devices'
+require 'lib/mobile_device'
+
+module CasperApi
+end
