@@ -2,6 +2,7 @@
 
 A work in progress Ruby wrapper for the Casper asset management API.
 
+
 == Installation
 
 In your Gemfile, put the following:
@@ -10,16 +11,16 @@ In your Gemfile, put the following:
 
 Don't forget to bundle your gems!
 
+
 == Usage
 
 Here's a quick and dirty example of how to use this:
 
   include CasperApi
-
   @casper         = Casper.new('<username>', '<password>')
   @joshs_computer = @casper.computers.find('Joshua Abbott') #=> Assuming a computer named "Joshua Abbott" exists, will return this computer and all associated data.
 
-- or -
+OR
 
   @some_computer = @casper.computers.find(1) #=> Returns computer with the ID of 1.
 
@@ -27,8 +28,9 @@ Here's a quick and dirty example of how to use this:
 If you don't know computer names or IDs you can always grab the full list of computers from Casper and then search the list for what you're looking for:
 
   @list             = @casper.computers.all #=> Will return a list of all computers with their names and IDs
-  joshs_computer_id = @list.search(:name, 'Josh').first.id
-  @joshs_computer   = @casper.computers.find(joshs_computer_id)
+  @joshs_computer_id = @list.search(:name, 'Josh').first.id
+  @joshs_computer   = @casper.computers.find(@joshs_computer_id)
+
 
 == API Methods
 
@@ -43,9 +45,11 @@ So far there is support for the following calls:
 
 Each of these will respond to the "all" and "find" methods. Lists respond to the "search" method.
 
+
 == Tests
 
 There are none. Please help.
+
 
 == Contributing to casper_api
  
@@ -56,6 +60,7 @@ There are none. Please help.
 * Commit and push until you are happy with your contribution
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
 
 == Copyright
 
