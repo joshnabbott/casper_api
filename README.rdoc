@@ -45,6 +45,8 @@ So far there is support for the following calls:
 
 Each of these will respond to the "all" and "find" methods. Lists respond to the "search" method.
 
+For more help regarding how the Casper API works check out this link: https://casper.factorylabs.com:8443/apiFrontPage.rest
+
 
 == Tests
 
