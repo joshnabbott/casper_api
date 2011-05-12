@@ -19,7 +19,7 @@ Here's a quick and dirty example of how to use this:
   @casper         = Casper.new('<username>', '<password>')
   @joshs_computer = @casper.computers.find('Joshua Abbott') #=> Assuming a computer named "Joshua Abbott" exists, will return this computer and all associated data.
 
-  - or -
+- or -
 
   @some_computer = @casper.computers.find(1) #=> Returns computer with the ID of 1.
 
@@ -34,12 +34,12 @@ If you don't know computer names or IDs you can always grab the full list of com
 
 So far there is support for the following calls:
 
-  - Casper#buildings
-  - Casper#categories
-  - Casper#computer_groups
-  - Casper#computers
-  - Casper#departments
-  - Casper#mobile_devices
+- Casper#buildings
+- Casper#categories
+- Casper#computer_groups
+- Casper#computers
+- Casper#departments
+- Casper#mobile_devices
 
 Each of these will respond to the "all" and "find" methods. Lists respond to the "search" method.
 
@@ -61,5 +61,3 @@ There are none. Please help.
 
 Copyright (c) 2011 Josh N. Abbott. See LICENSE.txt for
 further details.
-
-
