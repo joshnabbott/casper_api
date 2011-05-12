@@ -27,9 +27,9 @@ OR
 
 If you don't know computer names or IDs you can always grab the full list of computers from Casper and then search the list for what you're looking for:
 
-  @list             = @casper.computers.all #=> Will return a list of all computers with their names and IDs
+  @list              = @casper.computers.all #=> Will return a list of all computers with their names and IDs
   @joshs_computer_id = @list.search(:name, 'Josh').first.id
-  @joshs_computer   = @casper.computers.find(@joshs_computer_id)
+  @joshs_computer    = @casper.computers.find(@joshs_computer_id)
 
 
 == API Methods
